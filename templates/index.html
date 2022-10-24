@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Terps Hockey Stats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        {% for player in goals %}
+        <div class="playercard">
+            <div class="stats">
+                <p><b id="number">{{ player[0] }} - {{ player[1] }}</b></p>
+                <p>Goals: {{ player[2] }}
+                <p>Primary assists: {{ player[3] }}</p>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    
+</body>
+</html>
